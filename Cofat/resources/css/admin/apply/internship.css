@@ -1,0 +1,570 @@
+/* internship.css */
+/* Hero Section */
+.internship-hero {
+    background: linear-gradient(135deg, #212529 0%, #343a40 100%);
+    height: 40vh;
+    min-height: 300px;
+    border-radius: 30px;
+    margin: 20px auto;
+    max-width: 98%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.internship-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('{{ asset("images/pattern.png") }}') center/cover;
+    opacity: 0.05;
+}
+
+.internship-card {
+    max-width: 1400px;
+    margin: -50px auto 5rem;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    border: none;
+    padding: 3rem;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.internship-title {
+    position: relative;
+    margin-bottom: 2.5rem;
+    color: #343a40;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.internship-title:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #343a40 0%, #f8f9fa 100%);
+    border-radius: 2px;
+}
+
+/* Table Styles */
+.internship-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.internship-table-header {
+    background: linear-gradient(135deg, #343a40 0%, #212529 100%);
+    color: white;
+}
+
+.internship-table-header th {
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.internship-table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.internship-table tbody tr:hover {
+    background-color: rgba(52, 58, 64, 0.03);
+}
+
+/* Avatar Styles */
+.internship-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #343a40 0%, #212529 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+.internship-action-btn {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.internship-action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Badge Styles */
+.internship-badge-office {
+    font-size: 0.9rem;
+    padding: 0.5em 0.8em;
+    border-radius: 50px;
+    font-weight: 600;
+    background-color: #4e73df;
+    color: white;
+}
+
+.internship-badge-factory {
+    font-size: 0.9rem;
+    padding: 0.5em 0.8em;
+    border-radius: 50px;
+    font-weight: 600;
+    background-color: #1cc88a;
+    color: white;
+}
+
+.internship-status-badge {
+    font-size: 0.9rem;
+    padding: 0.5em 0.8em;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+/* Show Modal Styles */
+.internship-show-modal .modal-dialog {
+    max-width: 600px;
+    margin: 1.75rem auto;
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 3.5rem);
+}
+
+.internship-show-modal .modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.internship-show-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #343a40 0%, #212529 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 1rem;
+}
+
+.internship-show-avatar-initial {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.internship-show-title {
+    font-weight: 600;
+    color: #212529;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.internship-show-subtitle {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.internship-show-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.internship-show-info-badge {
+    background-color: rgba(63, 128, 234, 0.1);
+    color: #3f80ea;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.internship-show-info-label {
+    font-size: 0.75rem;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+}
+
+.internship-show-info-value {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #212529;
+}
+
+.internship-show-type-badge {
+    font-size: 0.75rem;
+    padding: 0.35em 0.65em;
+    border-radius: 50px;
+    display: inline-block;
+    color: white;
+}
+
+.internship-show-status-badge {
+    font-size: 0.75rem;
+    padding: 0.35em 0.65em;
+    border-radius: 50px;
+    display: inline-block;
+    color: white;
+}
+
+.internship-show-section {
+    margin-bottom: 1.25rem;
+}
+
+.internship-show-section-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.internship-show-detail-item {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.internship-show-detail-label {
+    font-weight: 600;
+    color: #212529;
+    min-width: 100px;
+    margin-right: 1rem;
+}
+
+.internship-show-detail-value {
+    color: #495057;
+}
+
+.internship-show-message {
+    font-size: 0.9rem;
+    color: #495057;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+/* Edit Modal Styles */
+.internship-edit-modal .modal-dialog {
+    max-width: 600px;
+}
+
+.internship-edit-modal .modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.internship-edit-modal .modal-header {
+    border-bottom: none;
+    padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.internship-edit-modal .modal-title {
+    font-weight: 600;
+    color: #212529;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.internship-edit-modal .modal-title i {
+    font-size: 1.1rem;
+}
+
+.internship-edit-modal .modal-subtitle {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.internship-edit-form .form-label {
+    font-size: 0.85rem;
+    color: #495057;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.internship-edit-form .form-label i {
+    margin-right: 8px;
+    font-size: 0.9rem;
+}
+
+.internship-edit-form .form-control,
+.internship-edit-form .form-select,
+.internship-edit-form .form-check-input {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s;
+}
+
+.internship-edit-form .form-control:focus,
+.internship-edit-form .form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.internship-edit-form .form-check-input {
+    margin-top: 0.15rem;
+}
+
+.internship-edit-form .form-check-label {
+    font-size: 0.9rem;
+    color: #212529;
+}
+
+.internship-edit-form .form-check {
+    display: flex;
+    align-items: center;
+}
+
+.internship-edit-form .form-check-input[type="radio"] {
+    width: 1.1em;
+    height: 1.1em;
+    margin-right: 0.5rem;
+}
+
+.internship-edit-submit-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.internship-edit-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Delete Modal Styles */
+.application-delete-modal .modal-dialog {
+    max-width: 450px;
+}
+
+.application-delete-modal .modal-content {
+    border-radius: 8px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.application-delete-modal .modal-body {
+    padding: 1.5rem;
+}
+
+.application-delete-modal .alert-danger {
+    background-color: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    color: #dc3545;
+}
+
+.application-preview {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+}
+
+.application-avatar-initial {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #343a40;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.application-name {
+    font-weight: 600;
+    color: #212529;
+}
+
+.application-delete-submit-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    border: none;
+    transition: all 0.3s;
+}
+
+.application-delete-submit-btn:hover {
+    background: linear-gradient(135deg, #c82333 0%, #dc3545 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .internship-show-avatar {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .internship-show-avatar-initial {
+        font-size: 1.25rem;
+    }
+    
+    .internship-show-info-badge {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .internship-edit-modal .modal-header {
+        padding: 1.25rem 1.25rem 0.5rem;
+    }
+    
+    .internship-edit-modal .modal-title {
+        font-size: 1.15rem;
+    }
+    
+    .internship-edit-form .form-label {
+        font-size: 0.8rem;
+    }
+    
+    .internship-edit-form .form-control,
+    .internship-edit-form .form-select {
+        font-size: 0.85rem;
+        padding: 0.45rem 0.7rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .internship-show-modal .modal-dialog {
+        max-width: 100%;
+        margin: 0.5rem auto;
+    }
+    
+    .internship-show-modal .modal-content {
+        border-radius: 0;
+    }
+    
+    .internship-edit-modal .modal-dialog {
+        max-width: 100%;
+        margin: 0.5rem auto;
+    }
+    
+    .internship-edit-modal .modal-title {
+        font-size: 1.1rem;
+    }
+    
+    .internship-edit-form .form-check-label {
+        font-size: 0.85rem;
+    }
+    
+    .internship-edit-submit-btn {
+        padding: 0.45rem 1.25rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .internship-title {
+        font-size: 1.5rem;
+    }
+    
+    .internship-hero {
+        height: 35vh;
+        min-height: 300px;
+        border-radius: 20px;
+    }
+    
+    .internship-card {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .internship-action-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+    
+    .internship-show-avatar {
+        width: 45px;
+        height: 45px;
+        margin-right: 0;
+        margin-bottom: 0.75rem;
+    }
+    
+    .internship-show-avatar-initial {
+        font-size: 1.1rem;
+    }
+    
+    .internship-show-info-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .internship-show-info-badge {
+        margin-bottom: 0.5rem;
+        margin-right: 0;
+    }
+    
+    .internship-show-detail-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .internship-show-detail-label {
+        margin-bottom: 0.25rem;
+        min-width: auto;
+    }
+    
+    .internship-edit-modal .modal-header {
+        padding: 1rem 1rem 0.5rem;
+    }
+    
+    .internship-edit-form .form-control,
+    .internship-edit-form .form-select {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.65rem;
+    }
+    
+    .internship-edit-submit-btn {
+        padding: 0.4rem 1.1rem;
+        font-size: 0.8rem;
+    }
+}

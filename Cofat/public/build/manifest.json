@@ -1,0 +1,24 @@
+{
+  "resources/css/admin/apply/internship.css": {
+    "file": "assets/internship-2b13eeb9.css",
+    "isEntry": true,
+    "src": "resources/css/admin/apply/internship.css"
+  },
+  "resources/css/admin/apply/job.css": {
+    "file": "assets/job-a3994188.css",
+    "isEntry": true,
+    "src": "resources/css/admin/apply/job.css"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-28c03430.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.js": {
+    "css": [
+      "assets/app-28c03430.css"
+    ],
+    "file": "assets/app-10b9948b.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
