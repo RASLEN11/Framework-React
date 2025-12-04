@@ -1,0 +1,45 @@
+.color-container {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    border: 1px solid #282c34;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #282c34;
+  }
+  
+  .color-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .color-palette {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .color-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .color-box:hover {
+    transform: scale(1.1);
+  }
+  
+  .color-display {
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  

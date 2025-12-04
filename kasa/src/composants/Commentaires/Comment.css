@@ -1,0 +1,87 @@
+h2 {
+    text-align: center;
+}
+
+p {
+    color: #696969;
+    font-size: 20px;
+}
+
+#nb-comments {
+    background-color: #4285F4;
+    padding: 3px 5px;
+    color: #fff;
+}
+
+.img-profil {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.content-comment {
+    width: 80%;
+}
+
+/***New Comment ***/
+.new-comment {
+    text-align: right;
+    width: 70%;
+    margin: auto;
+    position: relative;
+}
+
+textarea {
+    width: 80%;
+    height: 80px;
+    border: 1px solid #ddd;
+    background-color: #ddd;
+    padding: 5px;
+    border-radius: 10px;
+    resize: none;
+
+}
+
+textarea:focus {
+
+    outline: 2px solid #007bff;
+}
+
+.icons-box {
+    position: absolute;
+    left: 20%;
+    bottom: 8px;
+}
+
+.new-comment i {
+    color: #007bff;
+    padding-right: 10px;
+}
+
+.send-icon {
+    position: absolute;
+    bottom: 8px;
+    right: 5px;
+    font-size: 1.5rem;
+
+    /* Couleur de l'icône par défaut */
+    cursor: pointer;
+    /* Curseur pointer pour signaler que c'est cliquable */
+    transition: transform 0.3s ease, color 0.3s ease;
+
+}
+
+.send-icon:hover {
+    color: #0b519bf2;
+    /* Changer la couleur lors du survol */
+    transform: scale(1.2);
+    /* Agrandir légèrement l'icône */
+}

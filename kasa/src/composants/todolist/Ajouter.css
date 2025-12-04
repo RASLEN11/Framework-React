@@ -1,0 +1,115 @@
+/* Conteneur principal */
+.todo-container {
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .todo-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+  }
+  
+  .todo-input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .todo-input-container input {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .todo-input-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .todo-input-container button:hover {
+    background-color: #2c3744;
+  }
+  
+
+  .todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .todo-list li input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .todo-list li span {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .todo-list li span.completed {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  
+
+  .todo-list li button {
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .todo-list li button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Champ d'édition */
+.todo-list li input[type="text"] {
+    width: 60%;
+    padding: 5px;
+    font-size: 14px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .todo-list li button {
+    margin-left: 5px;
+  }
+  

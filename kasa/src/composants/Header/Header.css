@@ -1,0 +1,57 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #282c34;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribue l'espace entre les éléments */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Garde le logo à gauche */
+}
+
+.logo-image {
+  width: 65px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-container {
+  display: flex;
+  flex: 2; /* Permet aux liens de rester alignés à droite */
+  justify-content: flex-end; /* Aligne les liens à droite */
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #61dafb;
+}

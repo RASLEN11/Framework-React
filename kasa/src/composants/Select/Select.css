@@ -1,0 +1,38 @@
+.select-container {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .select-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2c2836;
+  }
+  
+  .select-dropdown {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .select-dropdown:focus {
+    border-color: #007bff;
+  }
+  
+  .select-result {
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
