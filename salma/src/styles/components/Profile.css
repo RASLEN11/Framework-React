@@ -1,0 +1,451 @@
+/* Profile Styles - Compact Version for Card Layout */
+.profile-section {
+  padding: 1rem 0 0.5rem;
+}
+
+.profile-card {
+  background: transparent;
+  backdrop-filter: none;
+  border-radius: 0;
+  padding: 0;
+  text-align: center;
+  box-shadow: none;
+  border: none;
+  margin-bottom: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-card::before {
+  display: none;
+}
+
+.avatar-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.tennis-racket {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 40px;
+  background: #8B4513;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.tennis-racket::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: #FFD700;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  border: 1.5px solid #8B4513;
+}
+
+.cat-emoji {
+  position: absolute;
+  bottom: -5px;
+  left: -5px;
+  font-size: 1.5rem;
+  z-index: 3;
+  animation: gentlePulse 2s ease-in-out infinite;
+}
+
+.profile-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2C5530;
+  margin-bottom: 0.2rem;
+}
+
+.profile-username {
+  color: #4ECDC4;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.profile-bio {
+  color: #555;
+  line-height: 1.4;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Porsche Section Styles */
+.porsche-section {
+  margin: 0.75rem 0;
+  padding: 1rem;
+  background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+  border-radius: 12px;
+  color: white;
+  text-align: left;
+}
+
+.porsche-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.porsche-info i {
+  font-size: 1.5rem;
+  color: #FFD700;
+}
+
+.porsche-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.porsche-model {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.porsche-spec {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Music Section Styles */
+.music-section {
+  margin: 0.75rem 0;
+  padding: 1rem;
+  background: linear-gradient(135deg, #b41e1e 0%, #a2644b 100%);
+  border-radius: 12px;
+  color: white;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.music-section::before {
+  content: "♪";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  opacity: 0.3;
+  color: #FFD700;
+}
+
+.music-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.music-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+.music-header i {
+  font-size: 1rem;
+  color: #FFEB3B;
+}
+
+.playlist-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.music-track {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.track-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #FFD700;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.track-artist {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  opacity: 0.95;
+}
+
+/* Music animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.music-section::before {
+  animation: pulse 2s infinite;
+}
+
+/* Social Icons Styles - Compact */
+.social-icons-container {
+  margin: 0.75rem 0;
+  padding: 0.75rem 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.social-icons-label {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0.6rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.social-icons-grid {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.social-icon-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(78, 205, 196, 0.1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-icon-circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--social-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-icon-circle:hover::before {
+  opacity: 0.2;
+}
+
+.social-icon-circle i {
+  font-size: 1rem;
+  color: #4ECDC4;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.social-icon-circle:hover i {
+  transform: scale(1.1);
+  color: var(--social-color);
+}
+
+.social-icon-circle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background: rgba(78, 205, 196, 0.15);
+}
+
+/* Platform-specific social icon colors */
+.social-icon-circle[style*="--social-color: #E4405F"] i {
+  color: #E4405F;
+}
+
+.social-icon-circle[style*="--social-color: #000000"] i {
+  color: #333;
+}
+
+.social-icon-circle[style*="--social-color: #1877F2"] i {
+  color: #1877F2;
+}
+
+.social-icon-circle:hover[style*="--social-color: #E4405F"] i {
+  color: #E4405F;
+}
+
+.social-icon-circle:hover[style*="--social-color: #000000"] i {
+  color: #000000;
+}
+
+.social-icon-circle:hover[style*="--social-color: #1877F2"] i {
+  color: #1877F2;
+}
+
+/* Animation for porsche icon */
+@keyframes drive {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+}
+
+.porsche-info i {
+  animation: drive 2s infinite;
+}
+
+/* Gentle pulse animation for cat */
+@keyframes gentlePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive Design for Profile */
+@media (max-width: 480px) {
+  .profile-section {
+    padding: 0.75rem 0 0.25rem;
+  }
+  
+  .profile-avatar {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .profile-name {
+    font-size: 1.1rem;
+  }
+  
+  .profile-username {
+    font-size: 0.8rem;
+  }
+  
+  .profile-bio {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  
+  .porsche-section {
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+  }
+  
+  .porsche-model {
+    font-size: 0.95rem;
+  }
+  
+  .porsche-spec {
+    font-size: 0.8rem;
+  }
+  
+  .music-section {
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+  }
+  
+  .music-section::before {
+    font-size: 1.5rem;
+    right: 10px;
+  }
+  
+  .track-name {
+    font-size: 1rem;
+  }
+  
+  .track-artist {
+    font-size: 0.85rem;
+  }
+  
+  .social-icons-grid {
+    gap: 0.6rem;
+  }
+  
+  .social-icon-circle {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .social-icon-circle i {
+    font-size: 0.9rem;
+  }
+  
+  .cat-emoji {
+    font-size: 1.2rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+  .music-section {
+    padding: 0.7rem;
+  }
+  
+  .music-section::before {
+    display: none; /* Hide music note on very small screens */
+  }
+  
+  .track-name {
+    font-size: 0.95rem;
+  }
+  
+  .track-artist {
+    font-size: 0.8rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .profile-name {
+    color: #4ECDC4;
+  }
+  
+  .profile-username {
+    color: #81E6D9;
+  }
+  
+  .profile-bio {
+    color: #E2E8F0;
+  }
+  
+  .social-icons-container {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .social-icons-label {
+    color: #A0AEC0;
+  }
+}

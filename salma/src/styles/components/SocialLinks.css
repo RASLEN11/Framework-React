@@ -1,0 +1,292 @@
+/* Links Section - Modern Design */
+.links-section {
+  padding: 0.5rem 0 1rem;
+}
+
+.links-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95));
+  backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-decoration: none;
+  width: 420px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  min-height: 70px;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.link-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-gradient));
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0.9;
+}
+
+.link-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.link-card:hover::before {
+  width: 6px;
+}
+
+.link-card:hover::after {
+  opacity: 1;
+  transform: rotate(45deg) translate(10%, 10%);
+}
+
+.link-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    0 8px 20px rgba(78, 205, 196, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(248, 250, 252, 1));
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.link-icon {
+  font-size: 1.4rem;
+  margin-right: 1rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-gradient));
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.link-icon i {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.link-card:hover .link-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.link-card:hover .link-icon i {
+  transform: scale(1.15);
+}
+
+.link-content {
+  flex: 1;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 50px;
+}
+
+.link-platform {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  background: linear-gradient(135deg, #2D3748, #4A5568);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.link-username {
+  font-size: 0.85rem;
+  color: #718096;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.link-arrow {
+  color: #CBD5E0;
+  font-size: 1.3rem;
+  font-weight: 300;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.link-card:hover .link-arrow {
+  transform: translateX(6px);
+  color: var(--accent-color);
+}
+
+/* Platform-specific styles with gradient colors */
+.link-card[style*="--accent-color: #E4405F"] { /* Instagram */
+  --accent-color: #E4405F;
+  --accent-gradient: #833AB4;
+}
+
+.link-card[style*="--accent-color: #000000"] { /* TikTok */
+  --accent-color: #000000;
+  --accent-gradient: #69C9D0;
+}
+
+.link-card[style*="--accent-color: #1877F2"] { /* Facebook */
+  --accent-color: #1877F2;
+  --accent-gradient: #42B72A;
+}
+
+.link-card[style*="--accent-color: #1DA1F2"] { /* Twitter */
+  --accent-color: #1DA1F2;
+  --accent-gradient: #14171A;
+}
+
+.link-card[style*="--accent-color: #FF0000"] { /* YouTube */
+  --accent-color: #FF0000;
+  --accent-gradient: #282828;
+}
+
+.link-card[style*="--accent-color: #1DB954"] { /* Spotify */
+  --accent-color: #1DB954;
+  --accent-gradient: #191414;
+}
+
+.link-card[style*="--accent-color: #BD081C"] { /* Pinterest */
+  --accent-color: #BD081C;
+  --accent-gradient: #E60023;
+}
+
+.link-card[style*="--accent-color: #FF6B35"] { /* Tennis League */
+  --accent-color: #FF6B35;
+  --accent-gradient: #4ECDC4;
+}
+
+.link-card[style*="--accent-color: #8A2BE2"] { /* Training Blog */
+  --accent-color: #8A2BE2;
+  --accent-gradient: #4A00E0;
+}
+
+/* Enhanced animations */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.link-card {
+  animation: slideInLeft 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.link-card:hover {
+  animation: float 2s ease-in-out infinite;
+}
+
+.link-card:nth-child(1) { animation-delay: 0.1s; }
+.link-card:nth-child(2) { animation-delay: 0.2s; }
+.link-card:nth-child(3) { animation-delay: 0.3s; }
+.link-card:nth-child(4) { animation-delay: 0.4s; }
+.link-card:nth-child(5) { animation-delay: 0.5s; }
+.link-card:nth-child(6) { animation-delay: 0.6s; }
+.link-card:nth-child(7) { animation-delay: 0.7s; }
+.link-card:nth-child(8) { animation-delay: 0.8s; }
+
+/* Responsive Design for Social Links */
+@media (max-width: 480px) {
+  .links-section {
+    padding: 0.25rem 0 1rem;
+  }
+  
+  .links-grid {
+    gap: 0.7rem;
+  }
+  
+  .link-card {
+    padding: 0.9rem 1rem;
+    border-radius: 14px;
+    min-height: 65px;
+  }
+  
+  .link-icon {
+    font-size: 1.2rem;
+    margin-right: 0.8rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  
+  .link-icon i {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .link-platform {
+    font-size: 0.95rem;
+  }
+  
+  .link-username {
+    font-size: 0.8rem;
+  }
+  
+  .link-arrow {
+    font-size: 1.2rem;
+  }
+  
+  .link-content {
+    min-height: 45px;
+  }
+}
